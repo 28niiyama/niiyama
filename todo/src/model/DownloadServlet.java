@@ -28,7 +28,7 @@ public class DownloadServlet extends HttpServlet {
 	try{
 		dao.getConnection();
 		vo = dao.detail(id);
-	}catch(Exception e){
+			}catch(Exception e){
 		e.printStackTrace();
 		throw new ServletException(e);
 	}finally{
@@ -43,7 +43,7 @@ public class DownloadServlet extends HttpServlet {
 		return;
 	}
 
-	File downloadFile = new File("C:/tmp/" + filename);
+	File downloadFile = new File(filename);
 	FileInputStream fis = new FileInputStream(downloadFile);
 	@SuppressWarnings("resource")
 	BufferedInputStream buf = new BufferedInputStream(fis);
