@@ -27,7 +27,7 @@ public class DeleteServlet extends HttpServlet {
  		}finally{
  			dao.closeConnection();
  		}
- 		 		setMessage(request,"タスク[" + paramId  + "]の削除処理が完了しました。");
+ 		 setMessage(request,"タスク[" + paramId  + "]の削除処理が完了しました。");
 
  		RequestDispatcher rd = request.getRequestDispatcher("/search.jsp");
  		rd.forward(request,response);
